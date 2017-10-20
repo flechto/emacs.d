@@ -18,11 +18,11 @@
     (package-install package)))
 
 
-(paredit-mode)
 
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
 (load "ui")
+(load "el")
 
 
 (message "Hello World!!")

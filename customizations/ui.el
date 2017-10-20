@@ -1,1 +1,3 @@
-(message "Looking good")
+(helm-mode)
+
+(load-theme 'misterioso)

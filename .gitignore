@@ -4,3 +4,6 @@ auto-save-list
 elpa
 recentf
 eclipse.d
+session.*
+projectile.*
+projectile-*

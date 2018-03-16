@@ -8,10 +8,21 @@
 (add-to-list 'package-archives
 	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/") t)
+
+(package-refresh-contents)
+
 (defvar packages-to-install
   '(paredit
     helm
-    gradle-mode))
+    projectile
+    helm-projectile
+    gradle-mode
+    groovy-mode
+    yaml-mode
+    web-mode))
 
 (dolist (package packages-to-install)
   (unless (package-installed-p package)
@@ -23,7 +34,7 @@
 
 (load "ui")
 (load "el")
-
+(load "java")
 
 (message "Hello World!!")
 (custom-set-variables
@@ -31,10 +42,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (gradle-mode paredit helm helm-ebdb))))
+ '(eclim-eclipse-dirs (quote ("~/.emacs.d/eclipse.d")))
+ '(eclim-executable "~/.emacs.d/eclipse.d/eclim")
+ '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (web-mode helm-projectile yaml-mode projectile paredit helm groovy-mode gradle-mode company-emacs-eclim))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'upcase-region 'disabled nil)

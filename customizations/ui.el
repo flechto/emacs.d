@@ -1,3 +1,5 @@
+(global-auto-revert-mode)
+
 (load-theme 'misterioso)
 
 (defalias 'yes-or-no-p 'y-or-n-p)

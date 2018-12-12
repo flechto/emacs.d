@@ -22,7 +22,9 @@
     gradle-mode
     groovy-mode
     yaml-mode
-    web-mode))
+    web-mode
+    clojure-mode
+    cider))
 
 (dolist (package packages-to-install)
   (unless (package-installed-p package)
@@ -35,6 +37,7 @@
 (load "ui")
 (load "el")
 (load "java")
+(load "clj")
 
 (message "Hello World!!")
 (custom-set-variables
